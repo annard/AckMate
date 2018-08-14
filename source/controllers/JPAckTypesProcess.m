@@ -1,6 +1,7 @@
 // Copyright (c) 2010 Trevor Squires. All Rights Reserved.
 // See License.txt for full license.
 
+#import "JPAckProcess.h"
 #import "JPAckTypesProcess.h"
 
 @interface JPAckTypesProcess ()
@@ -18,15 +19,6 @@ NSString * const kJPAckTypesResult = @"kJPAckTypesResult";
 @synthesize typesData;
 @synthesize errorData;
 @synthesize ackTask;
-
-enum {
-  ackInitial        = 0,
-  ackStdOutClosed   = 1<<0,
-  ackStdErrClosed   = 1<<1,
-  ackTerminated     = 1<<2,
-  ackComplete       = (ackStdOutClosed | ackStdErrClosed | ackTerminated)
-} ackStates;
-
 
 - (id)init
 {

@@ -26,9 +26,9 @@
 		69C43B0D112A361C007AC1C1 /* JPAckWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C43B09112A361C007AC1C1 /* JPAckWindowController.m */; };
 		69D7008D118115CA008A6125 /* ackmateExpanded.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 69D7008B118115CA008A6125 /* ackmateExpanded.pdf */; };
 		69D7008E118115CA008A6125 /* ackmateCollapsed.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 69D7008C118115CA008A6125 /* ackmateCollapsed.pdf */; };
+		82873B1621238A5700DAB108 /* ag in Resources */ = {isa = PBXBuildFile; fileRef = 82873B0C2123894100DAB108 /* ag */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		E218EA72149B1E4A009FA21D /* ag in Resources */ = {isa = PBXBuildFile; fileRef = E218EA71149B1E4A009FA21D /* ag */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -52,17 +52,17 @@
 			outputFiles = (
 				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE)",
 			);
-			script = "/usr/bin/env ragel ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.rl -o ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}";
+			script = "export PATH=/opt/local/bin:$PATH\n/usr/bin/env ragel ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.rl -o ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}";
 		};
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
-		E218EA6F149B1DDD009FA21D /* PBXContainerItemProxy */ = {
+		82873B1421238A1900DAB108 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E218EA68149B1D89009FA21D;
-			remoteInfo = "The Silver Searcher";
+			remoteGlobalIDString = 82873B0B2123894100DAB108;
+			remoteInfo = ag;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -97,7 +97,7 @@
 		69C43AFD112A35F9007AC1C1 /* JPAckResultTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPAckResultTableView.h; sourceTree = "<group>"; };
 		69C43AFE112A35F9007AC1C1 /* JPAckResultTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPAckResultTableView.m; sourceTree = "<group>"; };
 		69C43B02112A361C007AC1C1 /* JPAckProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPAckProcess.h; sourceTree = "<group>"; };
-		69C43B03112A361C007AC1C1 /* JPAckProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPAckProcess.m; sourceTree = "<group>"; };
+		69C43B03112A361C007AC1C1 /* JPAckProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = JPAckProcess.m; sourceTree = "<group>"; tabWidth = 2; };
 		69C43B04112A361C007AC1C1 /* JPAckProcess+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPAckProcess+Parsing.h"; sourceTree = "<group>"; };
 		69C43B05112A361C007AC1C1 /* JPAckProcess+Parsing.m.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "JPAckProcess+Parsing.m.rl"; sourceTree = "<group>"; };
 		69C43B06112A361C007AC1C1 /* JPAckResultSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPAckResultSource.h; sourceTree = "<group>"; };
@@ -106,10 +106,10 @@
 		69C43B09112A361C007AC1C1 /* JPAckWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPAckWindowController.m; sourceTree = "<group>"; };
 		69D7008B118115CA008A6125 /* ackmateExpanded.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ackmateExpanded.pdf; sourceTree = "<group>"; };
 		69D7008C118115CA008A6125 /* ackmateCollapsed.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ackmateCollapsed.pdf; sourceTree = "<group>"; };
+		82873B0C2123894100DAB108 /* ag */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ag; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B6048680CD000E48DA /* AckMate.tmplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AckMate.tmplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		E218EA71149B1E4A009FA21D /* ag */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ag; path = bundle_extras/the_silver_searcher/ag; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,6 @@
 		089C166AFE841209C02AAC07 /* AckMate */ = {
 			isa = PBXGroup;
 			children = (
-				E218EA71149B1E4A009FA21D /* ag */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -190,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5B49B6048680CD000E48DA /* AckMate.tmplugin */,
+				82873B0C2123894100DAB108 /* ag */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,24 +276,22 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXLegacyTarget section */
-		E218EA68149B1D89009FA21D /* The Silver Searcher */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "";
-			buildConfigurationList = E218EA6B149B1D89009FA21D /* Build configuration list for PBXLegacyTarget "The Silver Searcher" */;
+/* Begin PBXNativeTarget section */
+		82873B0B2123894100DAB108 /* ag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82873B122123894100DAB108 /* Build configuration list for PBXNativeTarget "ag" */;
 			buildPhases = (
+				82873B132123896D00DAB108 /* ShellScript */,
 			);
-			buildToolPath = ./build.sh;
-			buildWorkingDirectory = /Users/ggreer/code/ackmate/bundle_extras/the_silver_searcher;
+			buildRules = (
+			);
 			dependencies = (
 			);
-			name = "The Silver Searcher";
-			passBuildSettingsInEnvironment = 1;
-			productName = "The Silver Searcher";
+			name = ag;
+			productName = ag;
+			productReference = 82873B0C2123894100DAB108 /* ag */;
+			productType = "com.apple.product-type.tool";
 		};
-/* End PBXLegacyTarget section */
-
-/* Begin PBXNativeTarget section */
 		8D5B49AC048680CD000E48DA /* AckMate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "AckMate" */;
@@ -308,7 +306,7 @@
 				69C49DC5112A36B100B1349C /* PBXBuildRule */,
 			);
 			dependencies = (
-				E218EA70149B1DDD009FA21D /* PBXTargetDependency */,
+				82873B1521238A1900DAB108 /* PBXTargetDependency */,
 			);
 			name = AckMate;
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -324,6 +322,12 @@
 			attributes = {
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Jetpack Pony";
+				TargetAttributes = {
+					82873B0B2123894100DAB108 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "AckMate" */;
 			compatibilityVersion = "Xcode 8.0";
@@ -336,8 +340,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E218EA68149B1D89009FA21D /* The Silver Searcher */,
 				8D5B49AC048680CD000E48DA /* AckMate */,
+				82873B0B2123894100DAB108 /* ag */,
 			);
 		};
 /* End PBXProject section */
@@ -347,7 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E218EA72149B1E4A009FA21D /* ag in Resources */,
+				82873B1621238A5700DAB108 /* ag in Resources */,
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 				69B8C4BE112A371A00EB45AF /* ackmate_ack.autogenerated in Resources */,
 				69B8C4E6112A383600EB45AF /* JPAckWindow.xib in Resources */,
@@ -371,6 +375,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "mkdir -p \"$HOME/Library/Application Support/TextMate/PlugIns\"\ncp -pR \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"$HOME/Library/Application Support/TextMate/PlugIns\"";
+		};
+		82873B132123896D00DAB108 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=/opt/local/bin:$PATH\ncd \"$SOURCE_ROOT/bundle_extras/the_silver_searcher\"\n./build.sh\nmv ./ag \"$TARGET_BUILD_DIR\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -400,10 +417,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E218EA70149B1DDD009FA21D /* PBXTargetDependency */ = {
+		82873B1521238A1900DAB108 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E218EA68149B1D89009FA21D /* The Silver Searcher */;
-			targetProxy = E218EA6F149B1DDD009FA21D /* PBXContainerItemProxy */;
+			target = 82873B0B2123894100DAB108 /* ag */;
+			targetProxy = 82873B1421238A1900DAB108 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -532,51 +549,67 @@
 			};
 			name = Release;
 		};
-		E218EA69149B1D89009FA21D /* Debug */ = {
+		82873B102123894100DAB108 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEBUGGING_SYMBOLS = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UM2YCQ77N4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E218EA6A149B1D89009FA21D /* Release */ = {
+		82873B112123894100DAB108 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
+				DEVELOPMENT_TEAM = UM2YCQ77N4;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -602,11 +635,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E218EA6B149B1D89009FA21D /* Build configuration list for PBXLegacyTarget "The Silver Searcher" */ = {
+		82873B122123894100DAB108 /* Build configuration list for PBXNativeTarget "ag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E218EA69149B1D89009FA21D /* Debug */,
-				E218EA6A149B1D89009FA21D /* Release */,
+				82873B102123894100DAB108 /* Debug */,
+				82873B112123894100DAB108 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

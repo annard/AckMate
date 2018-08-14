@@ -23,15 +23,6 @@ NSString * const JPAckProcessComplete = @"JPAckProcessComplete";
 @synthesize ackTask;
 @synthesize ackResult;
 
-enum {
-  ackInitial        = 0,
-  ackStdOutClosed   = 1<<0,
-  ackStdErrClosed   = 1<<1,
-  ackTerminated     = 1<<2,
-  ackComplete       = (ackStdOutClosed | ackStdErrClosed | ackTerminated)
-} ackStates;
-
-
 - (id)initWithResultHolder:(JPAckResultSource*)resultHolder
 {
   if (self = [super init])
@@ -198,16 +189,21 @@ enum {
   if (immediately)
   {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [ackResult release], ackResult = nil;
+    [ackResult release];
+    ackResult = nil;
   }
 }
 
 - (void)dealloc
 {
-  [errorData release], errorData = nil;
-  [trailing release], trailing = nil;
-  [ackTask release], ackTask = nil;
-  [ackResult release], ackResult = nil;
+  [errorData release];
+  errorData = nil;
+  [trailing release];
+  trailing = nil;
+  [ackTask release];
+  ackTask = nil;
+  [ackResult release];
+  ackResult = nil;
   [super dealloc];
 }
 

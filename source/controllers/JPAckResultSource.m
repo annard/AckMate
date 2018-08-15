@@ -526,15 +526,15 @@ NSString* const amContentColumn  = @"amContentColumn";
 
 - (void)dealloc
 {
-  [searchRoot release], searchRoot = nil;
-  [resultStats release], resultStats = nil;
-  [resultRows release], resultRows = nil;
-  [longestLineNumber release], longestLineNumber = nil;
+  [searchRoot release];
+  [resultStats release];
+  [resultRows release];
+  [longestLineNumber release];
 
-  [headingAttributes release], headingAttributes = nil;
-  [bodyAttributes release], bodyAttributes = nil;
-  [bodyNowrapAttributes release], bodyNowrapAttributes = nil;
-  [bodyHighlightAttributes release], bodyHighlightAttributes = nil;
+  [headingAttributes release];
+  [bodyAttributes release];
+  [bodyNowrapAttributes release];
+  [bodyHighlightAttributes release];
 
   [super dealloc];
 }

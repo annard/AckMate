@@ -90,9 +90,8 @@ NSString * const kJPAckUseAg = @"kJPAckUseAg";
     preferences = prefs;
     pasteboardChangeCount = NSNotFound;
 
-    NSString* projectfile = [projectController filename] ? [projectController filename] : directory;
-    fileName = [[[projectfile lastPathComponent] stringByDeletingPathExtension] copy];
-    projectDirectory = [directory copy];
+    fileName = [[projectController performSelector:NSSelectorFromString(@"selectedDocument")] performSelector:NSSelectorFromString(@"displayName")];
+    projectDirectory = [projectController performSelector:NSSelectorFromString(@"projectPath")];
   }
   return self;
 }
@@ -335,23 +334,26 @@ NSString * const kJPAckUseAg = @"kJPAckUseAg";
 - (void)openProjectFile:(NSString*)file atLine:(NSString*)line selectionRange:(NSRange)selectionRange
 {
   NSString* absolute = [projectDirectory stringByAppendingPathComponent:file];
-  [[[NSApplication sharedApplication] delegate] openFiles:[NSArray arrayWithObject:absolute]];
+  [[[NSApplication sharedApplication] delegate] application:NSApp
+                                                  openFiles:[NSArray arrayWithObject:absolute]];
 
   for (NSWindow *w in [[NSApplication sharedApplication] orderedWindows])
   {
-    id wc = [w windowController];
+    id wc = [w delegate];
     NSString* openFileName = nil;
 
-    if ([[wc className] isEqualToString:@"OakProjectController"] || [[wc className] isEqualToString:@"OakDocumentController"])
+    if ([[wc className] isEqualToString:@"DocumentWindowController"])
       openFileName = [[[wc textView] document] filename];
 
     if ([openFileName isEqualToString:absolute])
     {
+      NSNumber *location = [NSNumber numberWithUnsignedInteger:selectionRange.location + 1];
+
       [[wc textView] goToLineNumber:line];
-      [[wc textView] goToColumnNumber:[NSNumber numberWithInt:selectionRange.location + 1]];
+      [[wc textView] goToColumnNumber:location];
 
       if (selectionRange.length > 0)
-        [[wc textView] selectToLine:line andColumn:[NSNumber numberWithInt:selectionRange.location + selectionRange.length + 1]];
+        [[wc textView] selectToLine:line andColumn:location];
 
       break;
     }
@@ -468,14 +470,14 @@ NSString * const kJPAckUseAg = @"kJPAckUseAg";
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 
-  [fileName release], fileName = nil;
-  [projectDirectory release], projectDirectory = nil;
-  [selectedSearchFolder release], selectedSearchFolder = nil;
-  [term release], term = nil;
-  [ackTypes release], ackTypes = nil;
-  [history release], history = nil;
-  [currentProcess release], currentProcess = nil;
-  [currentTypesProcess release], currentTypesProcess = nil;
+  [fileName release];
+  [projectDirectory release];
+  [selectedSearchFolder release];
+  [term release];
+  [ackTypes release];
+  [history release];
+  [currentProcess release];
+  [currentTypesProcess release];
   [super dealloc];
 }
 @end

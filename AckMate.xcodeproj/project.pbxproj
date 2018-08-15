@@ -103,7 +103,7 @@
 		69C43B06112A361C007AC1C1 /* JPAckResultSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPAckResultSource.h; sourceTree = "<group>"; };
 		69C43B07112A361C007AC1C1 /* JPAckResultSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPAckResultSource.m; sourceTree = "<group>"; };
 		69C43B08112A361C007AC1C1 /* JPAckWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPAckWindowController.h; sourceTree = "<group>"; };
-		69C43B09112A361C007AC1C1 /* JPAckWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPAckWindowController.m; sourceTree = "<group>"; };
+		69C43B09112A361C007AC1C1 /* JPAckWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = JPAckWindowController.m; sourceTree = "<group>"; tabWidth = 2; };
 		69D7008B118115CA008A6125 /* ackmateExpanded.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ackmateExpanded.pdf; sourceTree = "<group>"; };
 		69D7008C118115CA008A6125 /* ackmateCollapsed.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ackmateCollapsed.pdf; sourceTree = "<group>"; };
 		82873B0C2123894100DAB108 /* ag */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ag; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +133,10 @@
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
+			indentWidth = 2;
 			name = AckMate;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
 			isa = PBXGroup;

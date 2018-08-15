@@ -141,9 +141,12 @@ NSString * const kJPAckTypesResult = @"kJPAckTypesResult";
 - (void)dealloc
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
-  [errorData release], errorData = nil;
-  [typesData release], typesData = nil;
-  [ackTask release], ackTask = nil;
+  [errorData release];
+  errorData = nil;
+  [typesData release];
+  typesData = nil;
+  [ackTask release];
+  ackTask = nil;
   [super dealloc];
 }
 

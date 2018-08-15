@@ -65,9 +65,9 @@
 
 - (void)dealloc
 {
-  [parentObject release], parentObject = nil;
-  [resultObject release], resultObject = nil;
-  [childObjects release], childObjects = nil;
+  [parentObject release];
+  [resultObject release];
+  [childObjects release];
   [super dealloc];
 }
 

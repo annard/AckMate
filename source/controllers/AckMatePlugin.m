@@ -39,12 +39,13 @@
 {
   for (NSWindow *w in [[NSApplication sharedApplication] orderedWindows])
   {
-    id wc = [w windowController];
+    id wc = [w delegate];
+    NSLog(@"@@@ window controller: %@", [wc description]);
 
     if ([[wc className] isEqualToString:@"OakDocumentController"])
       return nil; // more frontmost non-project editing window...
 
-    if ([[wc className] isEqualToString:@"OakProjectController"])
+    if ([[wc className] isEqualToString:@"DocumentWindowController"])
       return wc;
   }
   return nil;
@@ -75,15 +76,14 @@
 
 - (NSString*)directoryForProject:(id)projectController
 {
-  NSDictionary* d = [projectController environmentVariables];
-  return [d objectForKey:@"TM_PROJECT_DIRECTORY"];
+  return [projectController performSelector:NSSelectorFromString(@"projectPath")];
 }
 
 - (void)projectWindowWillClose:(NSNotification*)notification
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowWillCloseNotification object:[notification object]];
   id windowController = [[notification object] windowController];
-  if ([[windowController className] isEqualToString:@"OakProjectController"])
+  if ([[windowController className] isEqualToString:@"DocumentWindowController"])
   {
     NSString* closingProjectDir = [self directoryForProject:windowController];
     JPAckWindowController* existingAckController = [ackWindows objectForKey:closingProjectDir];
@@ -117,7 +117,7 @@
       // don't submit patches for the key equivalent, just set your own in
       // system preferences under keyboard / keyboard shortcuts
       NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:title action:@selector(findWithAck:) keyEquivalent:@"f"];
-      [menuItem setKeyEquivalentModifierMask:(NSAlternateKeyMask | NSCommandKeyMask | NSControlKeyMask)];
+      [menuItem setKeyEquivalentModifierMask:(NSEventModifierFlagOption | NSEventModifierFlagCommand | NSEventModifierFlagControl)];
       [menuItem setTarget:self];
       [findMenu insertItem:menuItem atIndex:index ? index-1 : 0];
       [menuItem release];
@@ -169,8 +169,11 @@
 
 - (void)dealloc
 {
-  [ackPreferences release], ackPreferences = nil;
-  [ackWindows release], ackWindows = nil;
+  [ackPreferences release];
+  ackPreferences = nil;
+  [ackWindows release];
+  ackWindows = nil;
   [super dealloc];
 }
+
 @end

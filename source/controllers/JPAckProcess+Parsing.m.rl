@@ -1,6 +1,9 @@
 // Copyright (c) 2010 Trevor Squires. All Rights Reserved.
 // See License.txt for full license.
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused"
+
 #import "JPAckProcess+Parsing.h"
 #import "JPAckResultSource.h"
 
@@ -130,3 +133,4 @@
 
 @end
 
+#pragma clang diagnostic pop

@@ -4,7 +4,7 @@
 #import <Cocoa/Cocoa.h>
 
 @protocol TMPlugInController
-- (float)version;
+- (CGFloat)version;
 @end
 
 @interface AckMatePlugin : NSObject

@@ -53,9 +53,9 @@
 
 - (void)dealloc
 {
-  [lineNumber release], lineNumber = nil;
-  [lineContent release], lineContent = nil;
-  [matchRanges release], matchRanges = nil;
+  [lineNumber release];
+  [lineContent release];
+  [matchRanges release];
   [super dealloc];
 }
 

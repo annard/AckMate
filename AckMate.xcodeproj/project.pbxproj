@@ -107,6 +107,8 @@
 		69D7008B118115CA008A6125 /* ackmateExpanded.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ackmateExpanded.pdf; sourceTree = "<group>"; };
 		69D7008C118115CA008A6125 /* ackmateCollapsed.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ackmateCollapsed.pdf; sourceTree = "<group>"; };
 		82873B0C2123894100DAB108 /* ag */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ag; sourceTree = BUILT_PRODUCTS_DIR; };
+		82BC195D212A2C40006801F0 /* OakDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OakDocument.h; path = source/external/OakDocument.h; sourceTree = SOURCE_ROOT; };
+		82BC195E212A2C41006801F0 /* DocumentWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentWindowController.h; path = source/external/DocumentWindowController.h; sourceTree = SOURCE_ROOT; };
 		8D5B49B6048680CD000E48DA /* AckMate.tmplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AckMate.tmplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -265,6 +267,8 @@
 		69C43AEC112A35CA007AC1C1 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				82BC195E212A2C41006801F0 /* DocumentWindowController.h */,
+				82BC195D212A2C40006801F0 /* OakDocument.h */,
 				69C43AF0112A35EE007AC1C1 /* NSImage-NoodleExtensions.h */,
 				69C43AF1112A35EE007AC1C1 /* NSImage-NoodleExtensions.m */,
 				69C43AF2112A35EE007AC1C1 /* NSTableView+NoodleExtensions.h */,

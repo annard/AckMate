@@ -300,7 +300,7 @@ NSString * const kJPAckUseAg = @"kJPAckUseAg";
 
 - (void)updateSearchSelectionForEvent:(NSEvent*)event
 {
-  selectionSearch = ([event modifierFlags] & NSCommandKeyMask) ? YES : NO;
+  selectionSearch = ([event modifierFlags] & NSEventModifierFlagCommand) ? YES : NO;
   if (selectionSearch)
     self.selectedSearchFolder = [self projectSelectedSearchFolder];
   else

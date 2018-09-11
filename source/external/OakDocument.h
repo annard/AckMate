@@ -9,9 +9,8 @@
 #ifndef OakDocument_h
 #define OakDocument_h
 
-@class OakDocument;
-
-@interface OakDocument (TextMateImport)
+=
+@interface NSObject (OakDocument)
 
 + (instancetype)documentWithPath:(NSString*)aPath;
 

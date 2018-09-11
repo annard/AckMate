@@ -9,9 +9,11 @@
 #ifndef DocumentWindowController_h
 #define DocumentWindowController_h
 
-#import "OakDocument.h"
+@interface NSObject (DocumentWindowController)
 
 - (NSString *)projectPath;
-- (OakDocument *)selectedDocument;
+- (id)selectedDocument; // OakDocument
+
+@end
 
 #endif /* DocumentWindowController_h */
